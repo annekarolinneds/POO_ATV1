@@ -3,12 +3,29 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>annekarolinneds</groupId>
     <artifactId>Credencial</artifactId>
-    <version>POO1</version>
+    <version>1.0</version> <!-- Atualizei a versão para "1.0" como exemplo -->
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <exec.mainClass>annekarolinneds.credencial.Credencial</exec.mainClass>
     </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>annekarolinneds.credencial.Main</mainClass>
+                            <!-- Substitua "your.package.Main" pelo pacote e nome da classe "Main" corretos -->
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
