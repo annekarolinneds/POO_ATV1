@@ -13,6 +13,7 @@ public class Pessoa {
     private String nome;
     private LocalDate nascimento;
     private byte idade;
+    private Endereco endereco;
     
     //Construtor 
     public Pessoa(String nome,LocalDate nascimento){
@@ -47,5 +48,11 @@ public class Pessoa {
     }
     public void setIdade(byte idade){
         this.idade = idade;
+    }
+    public Endereco getEndereco(){
+        return endereco;
+    }
+    public void setEndereco(Endereco endereco){
+        this.endereco = endereco;
     }
 }
