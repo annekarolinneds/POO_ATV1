@@ -5,6 +5,8 @@
 package annekarolinneds.credencial;
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.ArrayList;
+import java.util.List;
 /**
  *
  * @author annekarolinneds
@@ -14,12 +16,14 @@ public class Pessoa {
     private LocalDate nascimento;
     private byte idade;
     private Endereco endereco;
+    private List<Telefone> telefones;
     
     //Construtor 
     public Pessoa(String nome,LocalDate nascimento){
         this.nome = nome;
         this.nascimento = nascimento;
-        this.idade = calcularIdade();
+        this.idade =(byte)calcularIdade();
+        this.telefones = new ArrayList<>();
     }
     public int calcularIdade(){
         LocalDate dataAtual = LocalDate.now();
@@ -55,4 +59,11 @@ public class Pessoa {
     public void setEndereco(Endereco endereco){
         this.endereco = endereco;
     }
+    public List<Telefone> getTelefones(){
+        return telefones;
+    }
+    public void setTelefones(List<Telefone> telefones){
+        this.telefones = telefones;
+    }
+    
 }
